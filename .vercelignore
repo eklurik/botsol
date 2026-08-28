@@ -1,0 +1,11 @@
+.env
+.env.*
+**/.env
+**/.env 
+node_modules
+.DS_Store
+03_Переписки_обезличено_выборка_97_из_1150.jsonl
+04_Расхождения_24_случая.json
+01_Правила_бота_граф.jdm.json
+agent.test.mjs
+regression-report.mjs

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BikeNow Support</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="brand"><span class="brand-mark">B</span><div><strong>BikeNow</strong><span>служба поддержки</span></div></div>
+      <span class="online"><i></i>мы на связи</span>
+    </header>
+    <section class="chat-card">
+      <div class="chat-head"><div><h1>Поддержка</h1><p>Опишите ситуацию, и мы разберёмся</p></div><span class="secure">● защищённый чат</span></div>
+      <div class="messages" id="messages">
+        <div class="message agent"><span class="avatar">B</span><div><p>Здравствуйте! Я помогу разобраться с поездкой, транспортом или оплатой. Расскажите, что случилось.</p><time>сейчас</time></div></div>
+        <div class="welcome-faq" aria-label="Частые вопросы">
+          <span>Частые вопросы</span>
+          <button class="faq-quick" data-text="Как завершить поездку?">Завершить поездку</button>
+          <button class="faq-quick" data-text="Замок не открылся">Замок не открылся</button>
+          <button class="faq-quick" data-text="Транспорт не едет">Транспорт не едет</button>
+          <button class="faq-quick" data-text="Хочу вернуть деньги за поездку">Оплата и возврат</button>
+        </div>
+      </div>
+      <form class="composer" id="form"><textarea id="text" rows="1" placeholder="Напишите сообщение..." autofocus></textarea><button class="send" aria-label="Отправить">↗</button></form>
+      <section class="feedback" id="feedback" hidden>
+        <strong>Чат закрыт</strong>
+        <p>Спасибо, что обратились в BikeNow. Оцените, пожалуйста, консультацию.</p>
+        <div class="rating" role="radiogroup" aria-label="Оценка чата">
+          <button type="button" data-rating="1" aria-label="1 из 5">1</button>
+          <button type="button" data-rating="2" aria-label="2 из 5">2</button>
+          <button type="button" data-rating="3" aria-label="3 из 5">3</button>
+          <button type="button" data-rating="4" aria-label="4 из 5">4</button>
+          <button type="button" data-rating="5" aria-label="5 из 5">5</button>
+        </div>
+        <textarea class="feedback-text" id="feedback-text" rows="2" placeholder="Что можно улучшить?"></textarea>
+        <button class="feedback-send" id="feedback-send" type="button" disabled>Оставить отзыв</button>
+        <p class="feedback-status" id="feedback-status" aria-live="polite"></p>
+      </section>
+      <p class="hint">Не отправляйте данные карты и пароли</p>
+    </section>
+    <section class="faq">
+      <div class="faq-title"><span>Частые вопросы</span><p>Выберите тему, чтобы открыть инструкцию</p></div>
+      <div class="faq-tabs" role="tablist">
+        <button class="faq-tab active" data-faq="finish" role="tab">Поездка</button>
+        <button class="faq-tab" data-faq="payment" role="tab">Оплата и возврат</button>
+        <button class="faq-tab" data-faq="vehicle" role="tab">Транспорт</button>
+        <button class="faq-tab" data-faq="unlock" role="tab">Разблокировка</button>
+      </div>
+      <div class="faq-instruction" id="faq-instruction">
+        <strong>Как завершить поездку</strong>
+        <p>Проверьте в приложении, что место остановки разрешено, припаркуйте транспорт и нажмите «Завершить поездку». Дождитесь подтверждения.</p>
+        <button class="faq-ask" data-text="Я не могу завершить поездку. Подскажите, что делать.">Задать этот вопрос в чате <span>↗</span></button>
+      </div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
